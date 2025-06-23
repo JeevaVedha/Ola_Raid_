@@ -34,11 +34,11 @@ df['Time'] = pd.to_datetime(df['Time'], format='%H:%M:%S', errors='coerce').dt.t
 #print(df['Week'].head())   
 
 
-for col in ['booking_status', 'vehicle_type', 'Payment_Method']:
+for col in ['Booking_Status', 'vehicle_type', 'Payment_Method']:
     df[col] = df[col].astype('string')
     #print(df[col].head())
 
-BS = df['booking_status'].isnull().sum() / len(df) * 100
+BS = df['Booking_Status'].isnull().sum() / len(df) * 100
 print(f"Percentage of null values in 'Booking_Status': {BS:.2f}%")
 #df['Booking_Status'] = df['booking_status'].fillna('others')    
 
