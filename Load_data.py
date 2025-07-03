@@ -2,6 +2,7 @@ import pandas as pd
 import psycopg2
 from sqlalchemy import create_engine, text
 from io import StringIO
+import streamlit as st
 import plotly.express as px
 
 # ---------------- PostgreSQL connection settings ----------------
@@ -155,3 +156,7 @@ cur.close()
 conn.close()
 
 print(f"✅ Loaded {len(df)} rows via COPY")
+
+#--------------------------------------------------------------------------------------------------------------
+
+ 
