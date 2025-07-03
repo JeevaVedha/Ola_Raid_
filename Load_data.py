@@ -84,15 +84,13 @@ df['Payment_Method'] = df['Payment_Method'].fillna('others')
 
 CRBC = df['Canceled_Rides_by_Customer'].isnull().sum() / len(df) * 100
 print(f"Percentage of null values in 'Canceled_Rides_by_Customer': {CRBC:.2f}%")
-#df['Canceled_Rides_by_Customer'] = df['Canceled_Rides_by_Customer'].fillna('Not Mentioned')
-df.drop('Canceled_Rides_by_Customer', axis=1, inplace=True)
-
+df['Canceled_Rides_by_Customer'] = df['Canceled_Rides_by_Customer'].fillna('Not Mentioned')
+ 
 
 CRBD = df['Canceled_Rides_by_Driver'].isnull().sum() / len(df) * 100
 print(f"Percentage of null values in 'Canceled_Rides_by_Driver': {CRBD:.2f}%")
 df['Canceled_Rides_by_Driver'] = df['Canceled_Rides_by_Driver'].fillna('Not Mentioned')
-df.drop('Canceled_Rides_by_Driver', axis=1, inplace=True)
-
+ 
 #df['Canceled_Rides_by_Customer'] = pd.to_numeric(df['Canceled_Rides_by_Customer'], errors='coerce').fillna(0).astype('Int64')
 #df['Canceled_Rides_by_Driver'] = pd.to_numeric(df['Canceled_Rides_by_Driver'], errors='coerce').fillna(0).astype('Int64')
  
