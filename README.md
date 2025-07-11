@@ -34,7 +34,7 @@ The app connects to a local PostgreSQL database `Ola_Raiders` and uses a table n
 ### 1. Clone the Repo
 
 ```bash
-git clone https://github.com/your-username/ola-sql-dashboard.git
+git clone https://github.com/JeevaVedha/Ola_Raid_.git
 cd ola-sql-dashboard
 ```
 
@@ -72,11 +72,8 @@ engine = create_engine('postgresql+psycopg2://postgres:password123@localhost:543
 ## 🚀 Run the App
 
 ```bash
-streamlit run app.py
+streamlit run Main.py
 ```
-
-Replace `app.py` with your actual filename.
-
 ---
 
 ## 📷 Screenshots
